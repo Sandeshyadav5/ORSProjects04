@@ -1,0 +1,107 @@
+pipeline {
+
+    agent any
+
+    environment {
+
+        JAVA_HOME = "C:\\Program Files\\Java\\jdk-17"
+        MAVEN_HOME = "C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.tasks.Maven_MavenInstallation\\Maven"
+
+        PATH = "${JAVA_HOME}\\bin;${MAVEN_HOME}\\bin;${env.PATH}"
+
+        DOCKER_PATH = "D:\\docker\\docker-project04"
+    }
+
+    stages {
+
+        stage('Cleanup Workspace') {
+            steps {
+                deleteDir()
+            }
+        }
+
+        stage('Clone Repository') {
+            steps {
+               git(
+    branch: 'main',
+    credentialsId: 'github-credentials',
+    url: 'https://github.com/Durgesh Lohiya9755/ORSProject04.git'
+)
+            }
+        }
+
+        stage('Build WAR') {
+            steps {
+                bat """
+                "%MAVEN_HOME%\\bin\\mvn.cmd" clean package -DskipTests -f ORSProject04\\pom.xml
+                """
+            }
+        }
+
+        stage('Copy WAR to Docker') {
+            steps {
+                bat """
+                copy /Y "ORSProject04\\target\\ORSProject04.war" "${DOCKER_PATH}\\ORSProject04.war"
+                """
+            }
+        }
+
+        stage('Docker Down') {
+            steps {
+                dir("${DOCKER_PATH}") {
+                    bat "docker compose down"
+                }
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                dir("${DOCKER_PATH}") {
+                    bat "docker compose build --no-cache"
+                }
+            }
+        }
+
+        stage('Docker Up') {
+            steps {
+                dir("${DOCKER_PATH}") {
+                    bat "docker compose up -d"
+                }
+            }
+        }
+
+        stage('Docker Status') {
+            steps {
+                bat "docker ps"
+            }
+        }
+
+        stage('Wait For Application') {
+            steps {
+                sleep time: 30, unit: 'SECONDS'
+            }
+        }
+
+        stage('Verify Application') {
+            steps {
+                bat "curl --fail http://localhost:8080/ORSProject04"
+            }
+        }
+
+    }
+
+    post {
+
+        success {
+            echo "Docker Deployment Successful"
+        }
+
+        failure {
+            echo "Docker Deployment Failed"
+        }
+
+        always {
+            deleteDir()
+        }
+    }
+}

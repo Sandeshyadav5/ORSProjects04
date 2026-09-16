@@ -1,0 +1,56 @@
+<input type = "submit" name ="operation" value = "LoginCtl.OP_SIGNUP">
+
+("select * from st_login where login = ?, password = ?");
+
+how to link create ?
+<a href = "WelcomeCtl">Welcome</a>
+
+href full form => Hypertext references
+
+jsp full form => Java Server Page;
+
+Q1. how to create Session Object ?
+Ans: HTTPSession session = Request.getSession();
+
+Q2. What is the Object of LOG4J ?
+Ans: LOGGER log = LOGGER.getLOGGER();
+
+SendMail Flow :-
+
+Smtp ka use kiya jata hai sendmail karne ke liye;
+
+sabse pelhe project ki depemdency add ki jati ha javax.mail (mail.dependency) pom.xml add ki hai, system.property me set ki hai 4 parameter set kiye hai.
+
+Sendmail karne ke liye 3 custom classes ka banaye hai.
+1. EmailUtility;
+2. EmailMessage;
+3. EmailBuilder;
+
+SendMail karne ke liye 4 Parameter Set Kiye Jata hai System.property SMTP Full form (SimpleMailTransforProtocol)
+stmp.server;
+stmp.port(25) by predefine and Secure the port no.(465);
+stmp.emaillogin
+stmp.emailpassword
+
+sendmail karne ke liya 6 predefine classes banaye hai;
+
+Transport
+Message
+Session
+PasswordAuthentication
+InternetAddress
+MimeMessage
+
+emailutiliy class me tansport ki sendsmail method message ka use kiya hai
+or mail karne ke liye sendmailkiya ka
+
+pom.xml me 6 dependency hai
+
+server(3.1.0)
+MySQL(8.0.2.9)
+c3po(0.9.1.7)
+Log4j(1.4.7)
+junit(8.1.0)
+
+
+
