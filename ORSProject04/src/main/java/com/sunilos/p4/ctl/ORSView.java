@@ -143,6 +143,15 @@ public interface ORSView {
 	public String QRSCANNERCODE_LIST_VIEW = PAGE_FOLDER + "/QrScannerCodeListView.jsp";
 	public String QRSCANNERCODE_REPORT_VIEW = "/reports/QrScannerCodeListReport.jrxml";
 	
+	/// ----- Delivery module ----- ////
+
+	public String DELIVERY_CTL = APP_CONTEXT + "/ctl/DeliveryCtl";
+	public String DELIVERY_VIEW = PAGE_FOLDER + "/DeliveryView.jsp";
+	public String DELIVERY_LIST_CTL = APP_CONTEXT + "/ctl/DeliveryListCtl";
+	public String DELIVERY_LIST_VIEW = PAGE_FOLDER + "/DeliveryListView.jsp";
+	public String DELIVERY_REPORT_VIEW = "/reports/DeliveryListReport.jrxml";
+	public String DELIVERY_REPORT_CTL = APP_CONTEXT + "/ctl/DeliveryReportCtl";
+	
 	///----pet model ----////
 
 	public String PET_CTL = APP_CONTEXT + "/ctl/PetCtl";
