@@ -17,10 +17,10 @@ public class DeliveryListCtl extends BaseListCtl<DeliveryBean, DeliveryModel> {
 		DeliveryBean bean = new DeliveryBean();
 
 		bean.setId(DataUtility.getLong(request.getParameter("id")));
-		bean.setCustomerName(DataUtility.getString(request.getParameter("productName")));
-		bean.setRestaurent(DataUtility.getString(request.getParameter("productCategory")));
-		bean.setOrderAmount(DataUtility.getInt(request.getParameter("orderDate")));
-		bean.setStatus(DataUtility.getString(request.getParameter("price")));
+		bean.setCustomerName(DataUtility.getString(request.getParameter("customerName")));
+		bean.setRestaurent(DataUtility.getString(request.getParameter("restaurent")));
+		bean.setOrderAmount(DataUtility.getLong(request.getParameter("orderAmount")));
+		bean.setStatus(DataUtility.getString(request.getParameter("status")));
 
 		populateDTO(bean, request);
 

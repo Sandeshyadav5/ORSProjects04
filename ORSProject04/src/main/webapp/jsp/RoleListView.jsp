@@ -109,7 +109,8 @@ String _suc = ServletUtility.getSuccessMessage(request);
 						%>
 						<tr>
 							<td><input type="checkbox" name="ids"
-								value="<%=bean.getId()%>"></td>
+								value="<%=bean.getId()%>"
+								onchange="if(!this.checked) this.closest('table').querySelector('thead input[type=checkbox]').checked=false;"></td>
 							<td class="text-muted small"><%=index++%></td>
 							<td class="fw-semibold"><%=bean.getName()%></td>
 							<td><%=bean.getDescription()%></td>

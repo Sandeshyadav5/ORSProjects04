@@ -456,6 +456,51 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</a></li>
 
 						<li><hr class="dropdown-divider border-secondary"></li>
+						
+						<!-- Delivery Module -->
+
+						<li>
+
+							<h6 class="dropdown-item text-uppercase text-info small">
+								<i class="bi bi-car-front me-1"></i> Delivery
+						</li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DELIVERY_CTL%>"> <i
+								class="bi bi-plus-circle text-success me-2"></i>Add Delivery
+						</a></li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DELIVERY_LIST_CTL%>"> <i
+								class="bi bi-card-list text-success me-2"></i>DeliveryList
+						</a></li>
+
+						<li><hr class="dropdown-divider border-secondary"></li>
+
+
+						<!-- Delivery Module -->
+
+						<li>
+
+							<h6 class="dropdown-item text-uppercase text-info small">
+								<i class="bi bi-car-front me-1"></i> Delivery
+						</li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DELIVERY_CTL%>"> <i
+								class="bi bi-plus-circle text-success me-2"></i>Add Delivery
+						</a></li>
+
+						<li><a class="dropdown-item"
+							href="<%=ORSView.DELIVERY_LIST_CTL%>"> <i
+								class="bi bi-card-list text-success me-2"></i>DeliveryList
+						</a></li>
+
+						<li><hr class="dropdown-divider border-secondary"></li>
+
+
+						
+
 
 						<!-- Pet module -->
 

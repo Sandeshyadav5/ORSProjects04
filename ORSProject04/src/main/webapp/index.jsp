@@ -58,9 +58,9 @@ String contextPath = request.getContextPath();
 		viewName = (String) request.getAttribute("p");
 	}
 
-	if (DataValidator.isNull(viewName)) {
+	 if (DataValidator.isNull(viewName)) {
 		viewName = "jsp/Welcome.jsp";
-	}
+	} 
 	%>
 
 	<main class="flex-grow-1">

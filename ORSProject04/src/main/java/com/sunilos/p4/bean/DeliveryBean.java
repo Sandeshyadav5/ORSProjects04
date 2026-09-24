@@ -13,7 +13,7 @@ public class DeliveryBean extends BaseBean {
 
 	private String customerName;
 	private String restaurent;
-	private int orderAmount;
+	private long orderAmount;
 	private String status;
 	
 	
@@ -34,11 +34,15 @@ public class DeliveryBean extends BaseBean {
 		this.restaurent = restaurent;
 	}
 
-	public int getOrderAmount() {
+	
+
+	
+
+	public long getOrderAmount() {
 		return orderAmount;
 	}
 
-	public void setOrderAmount(int orderAmount) {
+	public void setOrderAmount(long orderAmount) {
 		this.orderAmount = orderAmount;
 	}
 
@@ -67,7 +71,7 @@ public class DeliveryBean extends BaseBean {
 			super.setResultset(rs);
 			this.setCustomerName(rs.getString("customer_name"));
 			this.setRestaurent(rs.getString("restaurent"));
-			this.setOrderAmount(orderAmount);
+			this.setOrderAmount(rs.getLong("order_amount"));
 			this.setStatus(rs.getString("status"));
 
 		} catch (SQLException e) {

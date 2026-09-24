@@ -67,7 +67,7 @@ public class DeliveryCtl extends BaseCtl<DeliveryBean, DeliveryModel> {
 		bean.setId(DataUtility.getLong(request.getParameter("id")));
 		bean.setCustomerName(DataUtility.getString(request.getParameter("customerName")));
 		bean.setRestaurent(DataUtility.getString(request.getParameter("restaurent")));
-		bean.setOrderAmount(DataUtility.getInt(request.getParameter("orderAmount")));
+		bean.setOrderAmount(DataUtility.getLong(request.getParameter("orderAmount")));
 		bean.setStatus(DataUtility.getString(request.getParameter("status")));
 
 		populateDTO(bean, request);

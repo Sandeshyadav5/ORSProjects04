@@ -3,9 +3,13 @@ package com.sunilos.p4.ctl;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
 import com.sunilos.p4.bean.UserBean;
+import com.sunilos.p4.exception.ApplicationException;
+import com.sunilos.p4.model.RoleModel;
 import com.sunilos.p4.model.UserModel;
 import com.sunilos.p4.util.DataUtility;
 
@@ -22,6 +26,19 @@ import com.sunilos.p4.util.DataUtility;
 public class UserListCtl extends BaseListCtl<UserBean, UserModel> {
 
 	private static Logger log = Logger.getLogger(UserListCtl.class);
+	
+	
+	@Override
+	protected void preload(HttpServletRequest request) {
+		RoleModel model = new RoleModel();
+		try {
+			List l = model.list();
+			request.setAttribute("roleList", l);
+		} catch (ApplicationException e) {
+			log.error(e);
+		}
+
+	}
 
 	@Override
 	protected UserBean populateBean(HttpServletRequest request) {

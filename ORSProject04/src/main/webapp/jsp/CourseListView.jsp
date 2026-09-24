@@ -82,7 +82,9 @@
 						<% while(it.hasNext()) { CourseBean bean = it.next(); %>
 						<tr>
 							<td><input type="checkbox" name="ids"
-								value="<%=bean.getId()%>"></td>
+								value="<%=bean.getId()%>"
+								onchange="if(!this.checked) this.closest('table').querySelector('thead input[type=checkbox]').checked=false;">
+								</td>
 							<td class="text-muted small"><%=index++%></td>
 							<td class="text-muted small"><%=bean.getId()%></td>
 							<td class="fw-semibold"><%=bean.getName()%></td>

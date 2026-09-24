@@ -133,7 +133,7 @@ String _err = ServletUtility.getErrorMessage(request);
                     <input type="text"
                            name="orderAmount"
                            class="form-control"
-                           maxlength="200"
+                           
                            value="<%=bean.getOrderAmount()%>">
 
                     <div class="text-danger small mt-1">

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="DeliveryListReport"
+              pageWidth="595"
+              pageHeight="842"
+              columnWidth="555"
+              leftMargin="20"
+              rightMargin="20"
+              topMargin="20"
+              bottomMargin="20"
+              uuid="eb326b9a-6766-4554-93fc-6d209b22f4a0">
+
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="MyAdapter"/>
+
+    <queryString language="SQL">
+        <![CDATA[
+            select id, customer_name, restaurent, order_amount, status
+            from st_delivery
+        ]]>
+    </queryString>
+
+    <field name="id" class="java.lang.Long">
+        <property name="com.jaspersoft.studio.field.label" value="id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="st_delivery"/>
+    </field>
+
+    <field name="customerName" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="customer_name"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="st_delivery"/>
+    </field>
+
+    <field name="restaurent" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="restaurent"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="st_delivery"/>
+    </field>
+
+    <field name="orderAmount" class="java.lang.Long">
+        <property name="com.jaspersoft.studio.field.label" value="order_amount"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="st_delivery"/>
+    </field>
+
+    <field name="status" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="status"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="st_delivery"/>
+    </field>
+
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+
+    <title>
+        <band height="79" splitType="Stretch">
+            <staticText>
+                <reportElement x="170"
+                               y="30"
+                               width="203"
+                               height="30"
+                               uuid="e7fe03fb-cdc6-4f06-aee9-fcf40cc4acb9"/>
+                <textElement textAlignment="Center"
+                             verticalAlignment="Middle">
+                    <font size="16"/>
+                </textElement>
+                <text><![CDATA[Delivery Report List]]></text>
+            </staticText>
+        </band>
+    </title>
+
+    <pageHeader>
+        <band height="35" splitType="Stretch"/>
+    </pageHeader>
+
+    <columnHeader>
+        <band height="32" splitType="Stretch">
+
+            <staticText>
+                <reportElement x="0"
+                               y="0"
+                               width="111"
+                               height="30"
+                               uuid="8fbec11c-d918-4d8b-8df0-218bce135dfe"/>
+                <text><![CDATA[id]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="111"
+                               y="0"
+                               width="111"
+                               height="30"
+                               uuid="6c64d7c5-3e04-4c5e-b993-bc6cb92d6919"/>
+                <text><![CDATA[customer_name]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="222"
+                               y="0"
+                               width="111"
+                               height="30"
+                               uuid="1b0ebd49-97c1-48f2-846c-026f65533702"/>
+                <text><![CDATA[restaurent]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="333"
+                               y="0"
+                               width="111"
+                               height="30"
+                               uuid="2bf44eb9-c537-41a5-8fc1-7883144b949a"/>
+                <text><![CDATA[order_amount]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement x="444"
+                               y="0"
+                               width="111"
+                               height="30"
+                               uuid="fc0d5769-abb2-4f34-8494-89b0a16fd95b"/>
+                <text><![CDATA[status]]></text>
+            </staticText>
+
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="32" splitType="Stretch">
+
+            <textField>
+                <reportElement x="0"
+                               y="0"
+                               width="111"
+                               height="30"
+                               uuid="21696cb9-e30b-47bf-8643-4b077f14e0bc"/>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="111"
+                               y="0"
+                               width="111"
+                               height="30"
+                               uuid="c6d3d3ba-e5f0-4670-8f6d-d536b48fce34"/>
+                <textFieldExpression><![CDATA[$F{customerName}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="222"
+                               y="0"
+                               width="111"
+                               height="30"
+                               uuid="679dacfd-70b4-43c7-9cd3-31218f3d6ff5"/>
+                <textFieldExpression><![CDATA[$F{restaurent}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="333"
+                               y="0"
+                               width="111"
+                               height="30"
+                               uuid="8f56c5f6-53ec-4ae4-ae6d-bb0a076829df"/>
+                <textFieldExpression><![CDATA[$F{orderAmount}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement x="444"
+                               y="0"
+                               width="111"
+                               height="30"
+                               uuid="3a0697cc-0465-4445-9706-ac5a81b692ff"/>
+                <textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+            </textField>
+
+        </band>
+    </detail>
+
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+
+</jasperReport>
+

@@ -169,7 +169,8 @@ String _err = ServletUtility.getErrorMessage(request);
                             <td>
                                 <input type="checkbox"
                                        name="ids"
-                                       value="<%=productBean.getId()%>">
+                                       value="<%=productBean.getId()%>"
+                                       onchange="if(!this.checked) this.closest('table').querySelector('thead input[type=checkbox]').checked=false;">
                             </td>
 
                             <!-- Serial Number -->

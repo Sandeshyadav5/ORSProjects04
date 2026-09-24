@@ -39,7 +39,7 @@ public class DeliveryModel extends BaseModel<DeliveryBean> {
 			pstmt.setInt(1, pk);
 			pstmt.setString(2, bean.getCustomerName());
 			pstmt.setString(3, bean.getRestaurent());
-			pstmt.setInt(4, bean.getOrderAmount());
+			pstmt.setLong(4, bean.getOrderAmount());
 			pstmt.setString(5, bean.getStatus());
 			pstmt.setString(6, bean.getCreatedBy());
 			pstmt.setString(7, bean.getModifiedBy());
@@ -82,7 +82,7 @@ public class DeliveryModel extends BaseModel<DeliveryBean> {
 					+ " SET customer_name = ?, restaurent = ?, order_amount = ?, status = ?, CREATED_BY = ?, MODIFIED_BY = ?, CREATED_DATETIME = ?, MODIFIED_DATETIME = ? WHERE ID = ?");
 			pstmt.setString(1, bean.getCustomerName());
 			pstmt.setString(2, bean.getRestaurent());
-			pstmt.setInt(3, bean.getOrderAmount());
+			pstmt.setLong(3, bean.getOrderAmount());
 			pstmt.setString(4, bean.getStatus());
 			pstmt.setString(5, bean.getCreatedBy());
 			pstmt.setString(6, bean.getModifiedBy());
