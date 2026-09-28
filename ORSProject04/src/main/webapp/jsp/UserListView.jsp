@@ -79,7 +79,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 
 
-				
+
 
 
 				<input type="text" name="login" class="form-control form-control-sm"
@@ -111,11 +111,12 @@ String _suc = ServletUtility.getSuccessMessage(request);
 				</button>
 
 			</div>
-			<div class="p-3 bg-light border-bottom d-flex flex-wrap gap-2 align-items-center style="max-width: 180px;">
-			<b>ROLE</b>
-			
+			<div
+				class="p-3 bg-light border-bottom d-flex flex-wrap gap-2 align-items-center col-lg-4 style="max-width: 180px;">
+				<b>ROLE</b>
+
 				<%=HTMLUtility.getList("roleId", ServletUtility.getParameter("roleId", request), l)%>
-				</div>
+			</div>
 
 
 			<%
@@ -166,7 +167,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 
 				<table class="table table-hover align-middle mb-0">
 
-					<thead class="table-light">
+					<thead class="table-light" text align="center">
 
 						<tr>
 
@@ -178,7 +179,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 							<th>S.No</th>
 							<th>Photo</th>
 							<th>First Name</th>
-							<th>Last Name</th>
+							<th style="text align:center;">Last Name</th>
 							<th>Login ID</th>
 							<th>Gender</th>
 							<th>Date of Birth</th>
@@ -190,7 +191,7 @@ String _suc = ServletUtility.getSuccessMessage(request);
 					</thead>
 
 
-					<tbody>
+					<tbody >
 
 						<%
 						while (it.hasNext()) {

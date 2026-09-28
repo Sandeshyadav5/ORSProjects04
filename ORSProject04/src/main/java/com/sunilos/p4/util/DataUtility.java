@@ -75,6 +75,15 @@ public class DataUtility {
 			return 0;
 		}
 	}
+	public static double getDouble(String val) {
+		if (DataValidator.isNotNull(val)) {
+			
+				return Double.parseDouble(val.trim());
+			} else{
+				return 0.0;
+			}
+	
+		}
 
 	/**
 	 * Parses a date string (MM/dd/yyyy) into a Date
@@ -150,5 +159,7 @@ public class DataUtility {
 		e.printStackTrace(new PrintStream(baos));
 		return baos.toString();
 	}
+
+	
 
 }

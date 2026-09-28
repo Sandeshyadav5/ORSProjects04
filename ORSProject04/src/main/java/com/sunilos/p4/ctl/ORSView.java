@@ -3,9 +3,8 @@ package com.sunilos.p4.ctl;
 /**
  * Contains ORS View and Controller URI
  * 
- * @author  Durgesh Lohiya
- * @version 1.0
- * Copyright (c) Rays EdTech
+ * @author Durgesh Lohiya
+ * @version 1.0 Copyright (c) Rays EdTech
  */
 
 public interface ORSView {
@@ -83,7 +82,7 @@ public interface ORSView {
 	public String FACULTY_LIST_VIEW = PAGE_FOLDER + "/FacultyListView.jsp";
 	public String FACULTY_CTL = APP_CONTEXT + "/ctl/FacultyCtl";
 	public String FACULTY_LIST_CTL = APP_CONTEXT + "/ctl/FacultyListCtl";
-	
+
 	/// --- Reports ---- /////
 
 	public String STUDENT_REPORT_CTL = APP_CONTEXT + "/ctl/StudentReportCtl";
@@ -99,9 +98,9 @@ public interface ORSView {
 	public String PGHOSTEL_REPORT_CTL = APP_CONTEXT + "/ctl/PgHostelReportCtl";
 	public String SOFTWARELICENSE_REPORT_CTL = APP_CONTEXT + "/ctl/SoftwareLicenseReportCtl";
 	public String HOSPITAL_REPORT_CTL = APP_CONTEXT + "/ctl/HospitalReportCtl";
-	
+
 	//// --- ctl //// list ------//////
-	
+
 	public String PRODUCT_CTL = APP_CONTEXT + "/ctl/ProductCtl";
 	public String PRODUCT_LIST_CTL = APP_CONTEXT + "/ctl/ProductListCtl";
 	public String INTERVIEW_CTL = APP_CONTEXT + "/ctl/InterViewCtl";
@@ -112,37 +111,37 @@ public interface ORSView {
 	public String PGHOSTEL_LIST_CTL = APP_CONTEXT + "/ctl/PgHostelListCtl";
 	public String SOFTWARELICENSE_CTL = APP_CONTEXT + "/ctl/SoftwareLicenseCtl";
 	public String SOFTWARELICENSE_LIST_CTL = APP_CONTEXT + "/ctl/SoftwareLicenseListCtl";
-	
+
 	///// ----- Module ------ ///////
 
 	public String HOSPITAL_CTL = APP_CONTEXT + "/ctl/HospitalCtl";
 	public String HOSPITAL_VIEW = PAGE_FOLDER + "/HospitalView.jsp";
 	public String HOSPITAL_LIST_CTL = APP_CONTEXT + "/ctl/HospitalListCtl";
 	public String HOSPITAL_LIST_VIEW = PAGE_FOLDER + "/HospitalListView.jsp";
-	
+
 	/////// ---- SmartParking ---- ///////
-	
+
 	public String SMARTPARKING_CTL = APP_CONTEXT + "/ctl/SmartParkingCtl";
 	public String SMARTPARKING_VIEW = PAGE_FOLDER + "/SmartParkingView.jsp";
 	public String SMARTPARKING_LIST_CTL = APP_CONTEXT + "/ctl/SmartParkingListCtl";
 	public String SMARTPARKING_LIST_VIEW = PAGE_FOLDER + "/SmartParkingListView.jsp";
-	
+
 	///// --------- AiScanner Module------////
-	
+
 	public String AISCANNER_CTL = APP_CONTEXT + "/ctl/AiScannerCtl";
 	public String AISCANNER_VIEW = PAGE_FOLDER + "/AiScannerView.jsp";
 	public String AISCANNER_LIST_CTL = APP_CONTEXT + "/ctl/AiScannerListCtl";
 	public String AISCANNER_LIST_VIEW = PAGE_FOLDER + "AiScannerListView.jsp";
 	public String AISCANNER_REPORT_VIEW = "/reports/AiScannerListReport.jrxml";
-	
+
 	/// ----- QrScannerCode module ------- ////
-	
+
 	public String QRSCANNERCODE_CTL = APP_CONTEXT + "/ctl/QrScannerCodeCtl";
 	public String QRSCANNERCODE_VIEW = PAGE_FOLDER + "/QrScannerCodeView.jsp";
 	public String QRSCANNERCODE_LIST_CTL = APP_CONTEXT + "/ctl/QrScannerCodeListCtl";
 	public String QRSCANNERCODE_LIST_VIEW = PAGE_FOLDER + "/QrScannerCodeListView.jsp";
 	public String QRSCANNERCODE_REPORT_VIEW = "/reports/QrScannerCodeListReport.jrxml";
-	
+
 	/// ----- Delivery module ----- ////
 
 	public String DELIVERY_CTL = APP_CONTEXT + "/ctl/DeliveryCtl";
@@ -151,15 +150,24 @@ public interface ORSView {
 	public String DELIVERY_LIST_VIEW = PAGE_FOLDER + "/DeliveryListView.jsp";
 	public String DELIVERY_REPORT_VIEW = "/reports/DeliveryListReport.jrxml";
 	public String DELIVERY_REPORT_CTL = APP_CONTEXT + "/ctl/DeliveryReportCtl";
-	
-	///----pet model ----////
+
+	/// ----pet model ----////
 
 	public String PET_CTL = APP_CONTEXT + "/ctl/PetCtl";
 	public String PET_VIEW = PAGE_FOLDER + "/PetView.jsp";
 	public String PET_LIST_CTL = APP_CONTEXT + "/ctl/PetListCtl";
-	public String PET_LIST_VIEW = PAGE_FOLDER + "/PetListView.jsp";	
-	
-	////------ Report View ------- //////
+	public String PET_LIST_VIEW = PAGE_FOLDER + "/PetListView.jsp";
+
+///// --------- Service Module ------////
+
+	public String SERVICE_CTL = APP_CONTEXT + "/ctl/ServiceCtl";
+	public String SERVICE_VIEW = PAGE_FOLDER + "/ServiceView.jsp";
+	public String SERVICE_LIST_CTL = APP_CONTEXT + "/ctl/ServiceListCtl";
+	public String SERVICE_LIST_VIEW = PAGE_FOLDER + "/ServiceListView.jsp";
+	public String SERVICE_REPORT_VIEW = "/reports/ServiceListReport.jrxml";
+	public String SERVICE_REPORT_CTL = APP_CONTEXT + "/ctl/ServiceReportCtl";
+
+	//// ------ Report View ------- //////
 
 	public String COURSE_REPORT_VIEW = "/reports/CourseListReport.jrxml";
 	public String STUDENT_REPORT_VIEW = "/reports/StudentListReport.jrxml";
@@ -178,6 +186,5 @@ public interface ORSView {
 	public String SMARTPARKING_REPORT_CTL = APP_CONTEXT + "/ctl/SmartParkingReportCtl";
 	public String PET_REPORT_CTL = APP_CONTEXT + "/ctl/PetReportCtl";
 	public String PET_REPORT_VIEW = "/reports/PetListReport.jrxml";
-	
 
 }

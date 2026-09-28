@@ -1,4 +1,5 @@
 
+<%@page import="com.sunilos.p4.util.HTMLUtility"%>
 <%@page import="com.sunilos.p4.ctl.DeliveryCtl"%>
 <%@page import="com.sunilos.p4.ctl.BaseCtl"%>
 <%@page import="com.sunilos.p4.ctl.ORSView"%>
@@ -13,6 +14,7 @@
 </jsp:useBean>
 
 <%
+List l = (List) request.getAttribute("restaurantList");
 String _suc = ServletUtility.getSuccessMessage(request);
 String _err = ServletUtility.getErrorMessage(request);
 %>
@@ -109,11 +111,10 @@ String _err = ServletUtility.getErrorMessage(request);
                         <span class="text-danger">*</span>
                     </label>
 
-                    <input type="text"
-                           name="restaurent"
-                           class="form-control"
-                           maxlength="200"
-                           value="<%=DataUtility.getStringData(bean.getRestaurent())%>">
+                   <div class="col-md-6">
+						
+						<%=HTMLUtility.getList("restaurent", String.valueOf(bean.getRestaurent()), l)%>
+					</div>
 
                     <div class="text-danger small mt-1">
                         <%=ServletUtility.getErrorMessage("restaurent", request)%>

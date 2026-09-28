@@ -83,7 +83,7 @@ String _err = ServletUtility.getErrorMessage(request);
 					<label class="form-label fw-semibold">AdmissionDate
 						(mm/dd/yyyy)</label>
 					<div class="input-group">
-						<input type="text" name="admissionDate" id="udate"
+						<input type="text" name="admissionDate" id="udatee"
 							class="form-control" placeholder="Select AdmissionDate" readonly
 							value="<%=DataUtility.getDateString(bean.getAdmissionDate())%>">
 						<a class="btn btn-outline-secondary"> <img

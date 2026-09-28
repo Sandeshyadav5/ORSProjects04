@@ -22,14 +22,14 @@ public class DeliveryCtl extends BaseCtl<DeliveryBean, DeliveryModel> {
 	
 	@Override
 	protected void preload(HttpServletRequest request) {
-		DeliveryModel model = new DeliveryModel();
-		try {
-			List l = model.list();
-			request.setAttribute("deliveryList", l);
-		} catch (ApplicationException e) {
-			log.error(e);
-		}
-
+	    DeliveryModel model = new DeliveryModel();
+	    try {
+	        List l = model.list();
+	        request.setAttribute("deliveryList", l);
+	        request.setAttribute("restaurantList", l);
+	    } catch (ApplicationException e) {
+	        log.error(e);
+	    }
 	}
 	@Override
 	protected boolean validate(HttpServletRequest request) {

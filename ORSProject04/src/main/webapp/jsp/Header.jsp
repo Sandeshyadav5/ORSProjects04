@@ -237,7 +237,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 
 						<li><hr class="dropdown-divider border-secondary"></li>
 
-						
+
 					</ul></li>
 
 				<!-- ---- Reports (Admin only) ---- -->
@@ -433,7 +433,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<li><hr class="dropdown-divider border-secondary"></li>
 
 
-						
+
 
 						<!-- QrscannerCode -->
 
@@ -456,7 +456,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						</a></li>
 
 						<li><hr class="dropdown-divider border-secondary"></li>
-						
+
 						<!-- Delivery Module -->
 
 						<li>
@@ -465,9 +465,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								<i class="bi bi-car-front me-1"></i> Delivery
 						</li>
 
-						<li><a class="dropdown-item"
-							href="<%=ORSView.DELIVERY_CTL%>"> <i
-								class="bi bi-plus-circle text-success me-2"></i>Add Delivery
+						<li><a class="dropdown-item" href="<%=ORSView.DELIVERY_CTL%>">
+								<i class="bi bi-plus-circle text-success me-2"></i>Add Delivery
 						</a></li>
 
 						<li><a class="dropdown-item"
@@ -486,9 +485,8 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 								<i class="bi bi-car-front me-1"></i> Delivery
 						</li>
 
-						<li><a class="dropdown-item"
-							href="<%=ORSView.DELIVERY_CTL%>"> <i
-								class="bi bi-plus-circle text-success me-2"></i>Add Delivery
+						<li><a class="dropdown-item" href="<%=ORSView.DELIVERY_CTL%>">
+								<i class="bi bi-plus-circle text-success me-2"></i>Add Delivery
 						</a></li>
 
 						<li><a class="dropdown-item"
@@ -499,7 +497,7 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 						<li><hr class="dropdown-divider border-secondary"></li>
 
 
-						
+
 
 
 						<!-- Pet module -->
@@ -517,8 +515,33 @@ String displayName = loggedIn ? userBean.getFirstName() + " (" + session.getAttr
 
 						<li><a class="dropdown-item" href="<%=ORSView.PET_LIST_CTL%>"><i
 								class="bi bi-card-list text-success me-2"></i>PetList</a></li>
+								
+								
+								<!-- Service -->
+
+				<li>
+					<h6 class="dropdown-item text-uppercase text-info small">
+						<i class="bi bi-gear me-2"></i>Service
+					</h6>
+				</li>
+
+				<li><a class="dropdown-item" href="<%=ORSView.SERVICE_CTL%>">
+						<i class="bi bi-card-list text-success me-2"></i> Add Service
+				</a></li>
+
+				<li><a class="dropdown-item"
+					href="<%=ORSView.SERVICE_LIST_CTL%>"> <i
+						class="bi bi-card-list text-success me-2"></i> ServiceList
+				</a></li>
+
+				<li>
+					<hr class="dropdown-divider border-secondary">
+				</li>
 
 					</ul></li>
+					
+					
+				
 
 
 				<%

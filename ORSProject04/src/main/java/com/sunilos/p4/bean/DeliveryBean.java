@@ -56,12 +56,12 @@ public class DeliveryBean extends BaseBean {
 
 	@Override
 	public String getKey() {
-		return id + "";
+		return restaurent;
 	}
 
 	@Override
 	public String getValue() {
-		return customerName;
+		return restaurent;
 	}
 
 	@Override

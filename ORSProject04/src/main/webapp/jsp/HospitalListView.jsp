@@ -27,9 +27,9 @@ String _err = ServletUtility.getErrorMessage(request);
 				</a> <a href="<%=ORSView.HOSPITAL_REPORT_CTL %>?type=doc"
 					target="_blank" class="btn btn-sm btn-info fw-semibold"> <i
 					class="bi bi-file-earmark-word me-1"></i> Print DOC
-				</a> <a href="HospitalReportCtl" target="_blank"
+				</a> <a href="HospitalCtl"
 					class="btn btn-sm btn-light text-primary fw-semibold"> <i
-					class="bi bi-cart me-1"></i> Add Hospital
+					class="bi bi-plus-circle me-1"></i> Add Student
 				</a>
 			</div>
 		</div>
